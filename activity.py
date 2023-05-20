@@ -1,3 +1,4 @@
+import json
 import wmi
 import time
 
@@ -39,6 +40,7 @@ def CIp():
         print('If the modification fails, run in administrator mode')
         print('\n----------------------------------------------------------------------------------------------------------\n')
 
+        print('Directly enter to end the program')
         do = input('End the run?(Y/N)')
         if(do == 'N' or do == 'n'):
             pass
