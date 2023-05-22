@@ -17,8 +17,12 @@ def CIp():
 
         add_24,add_32 = input('10.10.*.*:').split('.')
         add = ['10.10.{}.{}'.format(add_24,add_32)]
-        mask = ['255.255.255.0']
-        gateway = ['10.10.22.1']
+
+        mask_24 = input('255.255.*.0:')
+        mask = ['255.255.{}.0'.format(mask_24)]
+
+        gw_24 = input('10.10.*.1:')
+        gateway = ['10.10.{}.1'.format(gw_24)]
         gateway_metric = [1]
         dns = ['10.10.1.3','223.5.5.5']
         ip_mask = net.EnableStatic(IPAddress=add, SubnetMask=mask)
